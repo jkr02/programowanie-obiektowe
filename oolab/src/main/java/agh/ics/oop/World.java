@@ -6,15 +6,7 @@ public class World {
         System.out.println("Start");
         int k = emp(args);
         Direction[] kierunki = new Direction[args.length-k];
-        int p=0;
-        for (int i=0; i<args.length; i+=1) {
-            if (!args[i].equals("l") && !args[i].equals("r") && !args[i].equals("f") && !args[i].equals("b")){
-                p+=1;
-            }
-            else {
-                kierunki[i-p] = Direction.valueOf(assign(args[i]));
-            }
-        }
+        assignment(kierunki, args);
         run(kierunki);
         System.out.println("Stop");
     }
@@ -26,6 +18,18 @@ public class World {
             }
         }
         return(k);
+    }
+
+    static void assignment(Direction[] x, String[] args){
+        int p=0;
+        for (int i=0; i<args.length; i+=1) {
+            if (!args[i].equals("l") && !args[i].equals("r") && !args[i].equals("f") && !args[i].equals("b")){
+                p+=1;
+            }
+            else {
+                x[i-p] = Direction.valueOf(assign(args[i]));
+            }
+        }
     }
     static String assign(String a){
         return(switch(a){

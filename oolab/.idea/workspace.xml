@@ -91,4 +91,9 @@
       </map>
     </option>
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/oolab$World.ic" NAME="World Coverage Results" MODIFIED="1666037514033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>agh.ics.oop.*</FILTER>
+    </SUITE>
+  </component>
 </project>
