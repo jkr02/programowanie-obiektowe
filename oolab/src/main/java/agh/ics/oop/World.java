@@ -4,9 +4,7 @@ package agh.ics.oop;
 public class World {
     public static void main(String[] args){
         System.out.println("Start");
-        int k = emp(args);
-        Direction[] kierunki = new Direction[args.length-k];
-        assignment(kierunki, args);
+        Direction[] kierunki = assignment(args);
         run(kierunki);
         System.out.println("Stop");
     }
@@ -20,16 +18,19 @@ public class World {
         return(k);
     }
 
-    static void assignment(Direction[] x, String[] args){
+    static Direction[] assignment(String[] args){
+        int k = emp(args);
+        Direction[] a = new Direction[args.length-k];
         int p=0;
         for (int i=0; i<args.length; i+=1) {
-            if (!args[i].equals("l") && !args[i].equals("r") && !args[i].equals("f") && !args[i].equals("b")){
+            if (assign(args[i]).equals("")){
                 p+=1;
             }
             else {
-                x[i-p] = Direction.valueOf(assign(args[i]));
+                a[i-p] = Direction.valueOf(assign(args[i]));
             }
         }
+        return(a);
     }
     static String assign(String a){
         return(switch(a){
@@ -44,9 +45,9 @@ public class World {
         for (int i=0; i<a.length; i+=1){
             String message = switch (a[i]){
                 case FORWARD -> "Do przodu";
-                case BACKWARD -> "Do tyłu";
-                case LEFT -> "Skręca w lewo";
-                case RIGHT -> "Skręca w prawo";
+                case BACKWARD -> "Do tylu";
+                case LEFT -> "Skreca w lewo";
+                case RIGHT -> "Skreca w prawo";
             };
             if (i<a.length-1) {
                 System.out.println(message + ",");
