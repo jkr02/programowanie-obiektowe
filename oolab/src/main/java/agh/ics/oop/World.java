@@ -8,11 +8,11 @@ public class World {
 //        run(kierunki);
         Vector2d position1 = new Vector2d(1,2);
         System.out.println(position1);
-        Vector2d position2 = new Vector2d(-2,1);
+        Vector2d position2 = new Vector2d(0,1);
         System.out.println(position2);
-        System.out.println(position1.add(position2));
-        System.out.println(position1.equals(position2));
-        System.out.println("Stop");
+//        System.out.println(position1.add(position2));
+//        System.out.println(position1.equals(position2));
+//        System.out.println("Stop");
     }
     static int emp(String[] arg){
         int k=0;
