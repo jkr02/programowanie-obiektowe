@@ -1,25 +1,38 @@
 package agh.ics.oop;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class MapDirectionTest {
-
     @Test
     void testToString() {
-        
+        assertEquals("Wschod",MapDirection.EAST.toString());
+        assertEquals("Zachod",MapDirection.WEST.toString());
+        assertEquals("Polnoc",MapDirection.NORTH.toString());
+        assertEquals("Poludnie",MapDirection.SOUTH.toString());
     }
 
     @Test
-    void next() {
+    void nextTest() {
+        assertEquals(MapDirection.SOUTH,MapDirection.EAST.next());
+        assertEquals(MapDirection.WEST,MapDirection.SOUTH.next());
+        assertEquals(MapDirection.NORTH,MapDirection.WEST.next());
+        assertEquals(MapDirection.EAST,MapDirection.NORTH.next());
     }
 
     @Test
-    void previous() {
+    void previousTest() {
+        assertEquals(MapDirection.EAST,MapDirection.SOUTH.previous());
+        assertEquals(MapDirection.SOUTH,MapDirection.WEST.previous());
+        assertEquals(MapDirection.WEST,MapDirection.NORTH.previous());
+        assertEquals(MapDirection.NORTH,MapDirection.EAST.previous());
     }
 
     @Test
-    void toUnitVector() {
+    void toUnitVectorTest() {
+        assertEquals(new Vector2d(0,-1), MapDirection.SOUTH.toUnitVector());
+        assertEquals(new Vector2d(0,1), MapDirection.NORTH.toUnitVector());
+        assertEquals(new Vector2d(-1,0), MapDirection.WEST.toUnitVector());
+        assertEquals(new Vector2d(1,0), MapDirection.EAST.toUnitVector());
     }
 }
