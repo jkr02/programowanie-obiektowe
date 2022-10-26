@@ -6,13 +6,30 @@ public class World {
         System.out.println("Start");
 //        Direction[] kierunki = assignment(args);
 //        run(kierunki);
-        Vector2d position1 = new Vector2d(1,2);
-        System.out.println(position1);
-        Vector2d position2 = new Vector2d(0,1);
-        System.out.println(position2);
-//        System.out.println(position1.add(position2));
-//        System.out.println(position1.equals(position2));
-//        System.out.println("Stop");
+//        Vector2d position1 = new Vector2d(1,2);
+//        System.out.println(position1);
+//        Vector2d position2 = new Vector2d(0,1);
+//        System.out.println(position2);
+////        System.out.println(position1.add(position2));
+////        System.out.println(position1.equals(position2));
+////        System.out.println("Stop");
+//        Animal Grogu = new Animal();
+//        System.out.println(Grogu.toString());
+//        Grogu.move(MoveDirection.RIGHT);
+//        Grogu.move(MoveDirection.FORWARD);
+//        Grogu.move(MoveDirection.FORWARD);
+//        System.out.println(Grogu.toString());
+//        Grogu.move(MoveDirection.FORWARD);
+//        System.out.println(Grogu.toString());
+        Animal Grogu = new Animal();
+        OptionsParser r2d2= new OptionsParser();
+        MoveDirection[] direction = r2d2.parse(args);
+        for(MoveDirection xwing: direction){
+            Grogu.move(xwing);
+            System.out.println(Grogu);
+        }
+        System.out.println(Grogu);
+        System.out.println("stop");
     }
     static int emp(String[] arg){
         int k=0;
@@ -24,7 +41,7 @@ public class World {
         return(k);
     }
 
-    static Direction[] assignment(String[] args){
+    Direction[] assignment(String[] args){
         int k = emp(args);
         Direction[] a = new Direction[args.length-k];
         int p=0;
