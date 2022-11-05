@@ -24,8 +24,8 @@ public class World {
         Animal Grogu = new Animal();
         OptionsParser r2d2= new OptionsParser();
         MoveDirection[] direction = r2d2.parse(args);
-        for(MoveDirection xwing: direction){
-            Grogu.move(xwing);
+        for(MoveDirection x_wing: direction){
+            Grogu.move(x_wing);
             System.out.println(Grogu);
         }
         System.out.println(Grogu);
