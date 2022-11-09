@@ -19,9 +19,11 @@ public class SimulationEngine implements IEngine{
     @Override
     public void run() {
         System.out.println(map);
-        for (int i=0; i<kierunki.length; i++){
-            animals.get(i%animals.size()).move(kierunki[i]);
-            System.out.println(map);
+        if (animals.size()>0) {
+            for (int i = 0; i < kierunki.length; i++) {
+                animals.get(i % animals.size()).move(kierunki[i]);
+                System.out.println(map);
+            }
         }
     }
 }
