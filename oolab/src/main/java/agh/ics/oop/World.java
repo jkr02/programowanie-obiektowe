@@ -21,14 +21,19 @@ public class World {
 //        System.out.println(Grogu.toString());
 //        Grogu.move(MoveDirection.FORWARD);
 //        System.out.println(Grogu.toString());
-        Animal Grogu = new Animal();
-        OptionsParser r2d2= new OptionsParser();
-        MoveDirection[] direction = r2d2.parse(args);
-        for(MoveDirection x_wing: direction){
-            Grogu.move(x_wing);
-            System.out.println(Grogu);
-        }
-        System.out.println(Grogu);
+//        Animal Grogu = new Animal();
+//        OptionsParser r2d2= new OptionsParser();
+//        MoveDirection[] direction = r2d2.parse(args);
+//        for(MoveDirection x_wing: direction){
+//            Grogu.move(x_wing);
+//            System.out.println(Grogu);
+//        }
+//        System.out.println(Grogu);
+        MoveDirection[] directions = new OptionsParser().parse(args);
+        IWorldMap map = new RectangularMap(10, 5);
+        Vector2d[] positions = { new Vector2d(2,2), new Vector2d(3,4) };
+        IEngine engine = new SimulationEngine(directions, map, positions);
+        engine.run();
         System.out.println("stop");
     }
     static int emp(String[] arg){
