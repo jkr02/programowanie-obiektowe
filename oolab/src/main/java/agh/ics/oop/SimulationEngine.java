@@ -8,17 +8,17 @@ public class SimulationEngine implements IEngine{
     private final IWorldMap map;
     private final MoveDirection[] kierunki;
     private List <Vector2d> pozycje = new ArrayList<Vector2d>();
-    private final JTextArea arena;
-    public SimulationEngine(MoveDirection[] kierunki, IWorldMap map, Vector2d[] positions, JTextArea arena){
+    private final JTextArea pole;
+    public SimulationEngine(MoveDirection[] kierunki, IWorldMap map, Vector2d[] positions, JTextArea pole){
         this.kierunki=kierunki;
         this.map=map;
-        this.arena = arena;
+        this.pole = pole;
         for (int i=0; i<positions.length; i++){
             Animal animal = new Animal(this.map, positions[i]);
             if(this.map.place(animal)){
                 this.pozycje.add(positions[i]);
             }
-            arena.setText(map.toString());
+            pole.setText(map.toString());
             System.out.print(map);
         }
     }
@@ -35,7 +35,7 @@ public class SimulationEngine implements IEngine{
                 }catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                arena.setText(map.toString());
+                pole.setText(map.toString());
                 System.out.println(map);
             }
         }

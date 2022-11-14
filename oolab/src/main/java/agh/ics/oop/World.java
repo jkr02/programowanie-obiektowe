@@ -42,13 +42,13 @@ public class World {
         JFrame frame = new JFrame();
         frame.setSize(800, 800);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JTextArea area = new JTextArea(map.toString());
+        JTextArea pole = new JTextArea(map.toString());
         int font_size = 800/max(2*10, max((5 + 3) * 2, 1));
-        area.setFont(new Font("Comic Sans", Font.BOLD, font_size));
-        frame.add(area);
+        pole.setFont(new Font("Comic Sans", Font.BOLD, font_size));
+        frame.add(pole);
         frame.setVisible(true);
 
-        IEngine engine = new SimulationEngine(directions, map, positions, area);
+        IEngine engine = new SimulationEngine(directions, map, positions, pole);
         engine.run();
         System.out.println("stop");
     }
