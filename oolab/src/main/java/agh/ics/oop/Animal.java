@@ -1,7 +1,7 @@
 package agh.ics.oop;
 
 public class Animal {
-    IWorldMap map;
+    protected IWorldMap map;
     private MapDirection direction;
     protected Vector2d position;
     public Animal(IWorldMap map, Vector2d initialPosition){

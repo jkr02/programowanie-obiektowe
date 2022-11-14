@@ -1,6 +1,11 @@
 package agh.ics.oop;
 
 
+import javax.swing.*;
+import java.awt.*;
+
+import static java.lang.Math.max;
+
 public class World {
     public static void main(String[] args){
         System.out.println("Start");
@@ -29,10 +34,21 @@ public class World {
 //            System.out.println(Grogu);
 //        }
 //        System.out.println(Grogu);
+
         MoveDirection[] directions = new OptionsParser().parse(args);
-        IWorldMap map = new RectangularMap(5, 5);
-        Vector2d[] positions = { };
-        IEngine engine = new SimulationEngine(directions, map, positions);
+        IWorldMap map = new RectangularMap(10, 5);
+        Vector2d[] positions = { new Vector2d(2,2), new Vector2d(3,4) };
+
+        JFrame frame = new JFrame();
+        frame.setSize(800, 800);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JTextArea area = new JTextArea(map.toString());
+        int font_size = 800/max(2*10, max((5 + 3) * 2, 1));
+        area.setFont(new Font("Comic Sans", Font.BOLD, font_size));
+        frame.add(area);
+        frame.setVisible(true);
+
+        IEngine engine = new SimulationEngine(directions, map, positions, area);
         engine.run();
         System.out.println("stop");
     }

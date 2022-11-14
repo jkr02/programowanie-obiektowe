@@ -40,7 +40,7 @@ public class MapVisualizer {
                 if (i < lowerLeft.y || i > upperRight.y) {
                     builder.append(drawFrame(j <= upperRight.x));
                 } else {
-                    builder.append(CELL_SEGMENT);
+                    builder.append(EMPTY_CELL);
                     if (j <= upperRight.x) {
                         builder.append(drawObject(new Vector2d(j, i)));
                     }

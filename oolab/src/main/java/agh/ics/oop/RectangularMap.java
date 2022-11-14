@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 class RectangularMap implements IWorldMap{
-    public final Vector2d wielkosc;
-    public List<Animal> animals = new ArrayList<>();
+    private final Vector2d wielkosc;
+    private List<Animal> animals = new ArrayList<>();
     public RectangularMap(int width, int height){
         this.wielkosc=new Vector2d(width,height);
     }
