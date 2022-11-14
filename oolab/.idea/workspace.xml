@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb5245f2-b224-4549-a356-36663d466141" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/RectangularMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/SimulationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/SimulationEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/AnimalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/AnimalTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +39,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -76,8 +79,8 @@
       <recent name="agh.ics.oop" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AnimalTest">
-    <configuration name="AnimalTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.RectangularMapTest.objectAt">
+    <configuration name="RectangularMapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -90,7 +93,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.AnimalTest&quot;" />
+            <option value="&quot;agh.ics.oop.RectangularMapTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -100,7 +103,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AnimalTest.isAt" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RectangularMapTest.canMoveTo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -113,7 +116,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.AnimalTest.isAt&quot;" />
+            <option value="&quot;agh.ics.oop.RectangularMapTest.canMoveTo&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -123,7 +126,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AnimalTest.move" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RectangularMapTest.isOccupied" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -136,7 +139,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.AnimalTest.move&quot;" />
+            <option value="&quot;agh.ics.oop.RectangularMapTest.isOccupied&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -146,7 +149,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OptionsParserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RectangularMapTest.objectAt" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -159,7 +162,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.OptionsParserTest&quot;" />
+            <option value="&quot;agh.ics.oop.RectangularMapTest.objectAt&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -169,7 +172,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OptionsParserTest.parse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RectangularMapTest.place" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -182,7 +185,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.OptionsParserTest.parse&quot;" />
+            <option value="&quot;agh.ics.oop.RectangularMapTest.place&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -193,19 +196,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.AnimalTest" />
-      <item itemvalue="Gradle.AnimalTest.move" />
-      <item itemvalue="Gradle.OptionsParserTest" />
-      <item itemvalue="Gradle.OptionsParserTest.parse" />
-      <item itemvalue="Gradle.AnimalTest.isAt" />
+      <item itemvalue="Gradle.RectangularMapTest" />
+      <item itemvalue="Gradle.RectangularMapTest.canMoveTo" />
+      <item itemvalue="Gradle.RectangularMapTest.isOccupied" />
+      <item itemvalue="Gradle.RectangularMapTest.objectAt" />
+      <item itemvalue="Gradle.RectangularMapTest.place" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AnimalTest" />
-        <item itemvalue="Gradle.OptionsParserTest" />
-        <item itemvalue="Gradle.AnimalTest.isAt" />
-        <item itemvalue="Gradle.AnimalTest.move" />
-        <item itemvalue="Gradle.OptionsParserTest.parse" />
+        <item itemvalue="Gradle.RectangularMapTest.objectAt" />
+        <item itemvalue="Gradle.RectangularMapTest.isOccupied" />
+        <item itemvalue="Gradle.RectangularMapTest.place" />
+        <item itemvalue="Gradle.RectangularMapTest.canMoveTo" />
+        <item itemvalue="Gradle.RectangularMapTest" />
       </list>
     </recent_temporary>
   </component>

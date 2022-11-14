@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="agh.ics.oop.RectangularMapTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-14T19:28:02" hostname="DESKTOP-G37MSAM" time="5.06">
+  <properties/>
+  <testcase name="objectAt()" classname="agh.ics.oop.RectangularMapTest" time="5.06"/>
+  <system-out><![CDATA[ y\x  0 1 2 3 4
+  5: -----------
+  4:            
+  3:            
+  2:      N     
+  1:            
+  0:            
+ -1: -----------
+ y\x  0 1 2 3 4
+  5: -----------
+  4:            
+  3:            
+  2:    N N     
+  1:            
+  0:            
+ -1: -----------
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
