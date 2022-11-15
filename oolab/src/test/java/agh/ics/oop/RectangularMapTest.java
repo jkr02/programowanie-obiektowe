@@ -2,7 +2,6 @@ package agh.ics.oop;
 
 import org.junit.jupiter.api.Test;
 
-import javax.swing.*;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,9 +10,8 @@ class RectangularMapTest {
     String[] dane = {"f", "l", "r","f","f"}; //argumenty dobrane tak, aby doszlo do zderzenia lub unikniecia kolizji
     MoveDirection[] kierunki = new OptionsParser().parse(dane);
     IWorldMap mapa = new RectangularMap(4, 4);
-    JTextArea arena = new JTextArea();
     Vector2d[] pozycje = { new Vector2d(2,2), new Vector2d(1, 2)};//argumenty dobrane tak, aby doszlo do zderzenia lub unikniecia kolizji
-    IEngine engine = new SimulationEngine(kierunki, mapa, pozycje, arena);
+    IEngine engine = new SimulationEngine(kierunki, mapa, pozycje);
     @Test
     void canMoveTo() {
         engine.run();

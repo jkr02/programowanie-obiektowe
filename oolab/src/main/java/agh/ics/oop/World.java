@@ -44,7 +44,7 @@ public class World {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JTextArea pole = new JTextArea(map.toString());
         int font_size = 800/max(2*10, max((5 + 3) * 2, 1));
-        pole.setFont(new Font("Comic Sans", Font.BOLD, font_size));
+        pole.setFont(new Font(Font.MONOSPACED, Font.BOLD, font_size));
         frame.add(pole);
         frame.setVisible(true);
 
