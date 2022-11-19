@@ -20,9 +20,11 @@ public class SimulationEngine implements IEngine{
     public SimulationEngine(MoveDirection[] kierunki, IWorldMap map, Vector2d[] positions){
         this.kierunki=kierunki;
         this.map=map;
+        GrassField mapa = (GrassField) map;
         for (Vector2d position : positions) {
             Animal animal = new Animal(this.map, position);
             this.map.place(animal);
+            mapa.placeGrass();
             System.out.print(map);
         }
     }
@@ -31,7 +33,7 @@ public class SimulationEngine implements IEngine{
         if (pole == null) {
             System.out.println(map);
         }
-        RectangularMap mapa = (RectangularMap) this.map;
+        GrassField mapa = (GrassField) this.map;
         ArrayList<Animal> animals = mapa.getAnimals();
         if (animals.size()>0) {
             for (int i = 0; i < kierunki.length; i++) {
@@ -45,6 +47,7 @@ public class SimulationEngine implements IEngine{
                     pole.setText(map.toString());
                 }
                 else System.out.println(map);
+                mapa.placeGrass();
             }
         }
     }

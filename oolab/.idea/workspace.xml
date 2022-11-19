@@ -13,24 +13,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/MapVisualizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/MapVisualizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/RectangularMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/RectangularMap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/SimulationEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/SimulationEngine.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/agh/ics/oop/RectangularMapTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/agh/ics/oop/RectangularMapTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/agh.ics.oop.RectangularMapTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/agh.ics.oop.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/agh.ics.oop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-agh.ics.oop.RectangularMapTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/MapVisualizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/MapVisualizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/RectangularMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/SimulationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/SimulationEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/RectangularMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/RectangularMapTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/SimulationEngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/SimulationEngineTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,9 +49,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
