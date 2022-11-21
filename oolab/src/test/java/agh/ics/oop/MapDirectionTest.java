@@ -6,10 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class MapDirectionTest {
     @Test
     void testToString() {
-        assertEquals("Wschod",MapDirection.EAST.toString());
-        assertEquals("Zachod",MapDirection.WEST.toString());
-        assertEquals("Polnoc",MapDirection.NORTH.toString());
-        assertEquals("Poludnie",MapDirection.SOUTH.toString());
+        assertEquals("E",MapDirection.EAST.toString());
+        assertEquals("W",MapDirection.WEST.toString());
+        assertEquals("N",MapDirection.NORTH.toString());
+        assertEquals("S",MapDirection.SOUTH.toString());
     }
 
     @Test

@@ -6,8 +6,17 @@ abstract class AbstarctWorldMap implements IWorldMap{
     protected ArrayList<Animal> animals = new ArrayList<>();
     protected Vector2d min_position;
     protected Vector2d max_position;
+    protected Vector2d right_corner;
+    protected Vector2d left_corner;
     public ArrayList<Animal> getAnimals(){
         return new ArrayList<>(animals);
+    }
+    @Override
+    public boolean canMoveTo(Vector2d position) {
+        if (position.follows(left_corner) && position.precedes(right_corner) && !isOccupied(position)){
+            return true;
+        }
+        return false;
     }
     @Override
     public boolean place(Animal animal) {
@@ -32,5 +41,11 @@ abstract class AbstarctWorldMap implements IWorldMap{
             }
         }
         return null;
+    }
+    public Vector2d get_min_position(){
+        return min_position;
+    }
+    public Vector2d get_max_position(){
+        return max_position;
     }
 }

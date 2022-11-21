@@ -46,5 +46,15 @@ class RectangularMapTest {
         assertEquals(animals.get(1), mapa.objectAt(new Vector2d(0,2)));
         assertNotEquals(animals.get(0), mapa.objectAt(new Vector2d(0,2)));
     }
+    @Test
+    void get_min_position(){
+        engine.run();
+        assertEquals(mapa.get_min_position(), new Vector2d(0,0));
+    }
+    @Test
+    void get_max_position(){
+        engine.run();
+        assertEquals(mapa.get_max_position(), new Vector2d(4,4));
+    }
 
 }
