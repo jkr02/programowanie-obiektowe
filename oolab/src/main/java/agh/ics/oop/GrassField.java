@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import static java.lang.Math.*;
 
 public class GrassField extends AbstarctWorldMap{
-    private Integer n;
+    private final Integer n;
     private final int zakres;
-    private ArrayList<Grass> pole;
+    private final ArrayList<Grass> pole;
     public GrassField(Integer n){
         this.n=n;
         this.zakres=(int) sqrt(n*10);
@@ -15,8 +15,8 @@ public class GrassField extends AbstarctWorldMap{
         this.left_corner = new Vector2d(Integer.MIN_VALUE, Integer.MIN_VALUE);
         this.max_position=new Vector2d(zakres,zakres);
         this.min_position=new Vector2d(0,0);
-        this.pole=new ArrayList<Grass>();
-        this.animals=new ArrayList<Animal>();
+        this.pole= new ArrayList<>();
+        this.animals= new ArrayList<>();
         placeGrass();
     }
     private boolean canplaceGrass(){
@@ -29,10 +29,10 @@ public class GrassField extends AbstarctWorldMap{
         }
         return false;
     }
-    public boolean placeGrass(){
+    public void placeGrass(){
         while (pole.size()<n){
             if (!canplaceGrass()){
-                return false;
+                return;
             }
             else {
                 while (true) {
@@ -44,7 +44,6 @@ public class GrassField extends AbstarctWorldMap{
                 }
             }
         }
-        return true;
     }
     @Override
     public boolean canMoveTo(Vector2d position) {

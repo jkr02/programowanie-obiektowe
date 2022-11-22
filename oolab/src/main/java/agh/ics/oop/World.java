@@ -49,9 +49,9 @@ public class World {
     }
     static int emp(String[] arg){
         int k=0;
-        for (int i=0; i<arg.length; i+=1){
-            if (!arg[i].equals("l") && !arg[i].equals("r") && !arg[i].equals("f") && !arg[i].equals("b")){
-                k+=1;
+        for (String s : arg) {
+            if (!s.equals("l") && !s.equals("r") && !s.equals("f") && !s.equals("b")) {
+                k += 1;
             }
         }
         return(k);

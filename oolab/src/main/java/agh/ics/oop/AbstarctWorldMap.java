@@ -13,10 +13,7 @@ abstract class AbstarctWorldMap implements IWorldMap{
     }
     @Override
     public boolean canMoveTo(Vector2d position) {
-        if (position.follows(left_corner) && position.precedes(right_corner) && !isOccupied(position)){
-            return true;
-        }
-        return false;
+        return position.follows(left_corner) && position.precedes(right_corner) && !isOccupied(position);
     }
     @Override
     public boolean place(Animal animal) {
