@@ -9,8 +9,9 @@ public class GrassField extends AbstarctWorldMap{
     private final int zakres;
     private final ArrayList<Grass> pole;
     public GrassField(Integer n){
-        this.n=n;
-        this.zakres=(int) sqrt(n*10);
+        if (n<0)this.n=0;
+        else this.n=n;
+        this.zakres=(int) (sqrt(n)*sqrt(10));
         this.right_corner = new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);
         this.left_corner = new Vector2d(Integer.MIN_VALUE, Integer.MIN_VALUE);
         this.max_position=new Vector2d(zakres,zakres);
@@ -29,21 +30,24 @@ public class GrassField extends AbstarctWorldMap{
         }
         return false;
     }
-    public void placeGrass(){
+    public boolean placeGrass(){
+        boolean put=false;
         while (pole.size()<n){
             if (!canplaceGrass()){
-                return;
+                return false;
             }
             else {
                 while (true) {
                     Vector2d wsp = new Vector2d((int) (random() * zakres), (int) (random() * zakres));
                     if (objectAt(wsp) == null) {
                         pole.add(new Grass(wsp));
+                        put=true;
                         break;
                     }
                 }
             }
         }
+        return put;
     }
     @Override
     public boolean canMoveTo(Vector2d position) {
@@ -66,6 +70,7 @@ public class GrassField extends AbstarctWorldMap{
             pole.remove(objectAt(animal.getPosition()));
             animals.add(animal);
             placeGrass();
+            return true;
         }
         return false;
     }
