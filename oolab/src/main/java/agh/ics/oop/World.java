@@ -43,6 +43,7 @@ public class World {
         frame.add(pole);
         frame.setVisible(true);
 
+
         IEngine engine = new SimulationEngine(directions, map, positions, pole);
         engine.run();
         System.out.println("stop");

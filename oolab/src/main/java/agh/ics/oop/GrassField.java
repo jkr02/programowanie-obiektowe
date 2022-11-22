@@ -14,7 +14,7 @@ public class GrassField extends AbstarctWorldMap{
         this.zakres=(int) (sqrt(n)*sqrt(10));
         this.right_corner = new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);
         this.left_corner = new Vector2d(Integer.MIN_VALUE, Integer.MIN_VALUE);
-        this.max_position=new Vector2d(zakres,zakres);
+        this.max_position=new Vector2d(0,0);
         this.min_position=new Vector2d(0,0);
         this.pole= new ArrayList<>();
         this.animals= new ArrayList<>();
@@ -88,16 +88,28 @@ public class GrassField extends AbstarctWorldMap{
         return null;
     }
     private Vector2d minimize(){
-        Vector2d minimum=min_position;
+        Vector2d minimum=new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);
         for (Animal animal: animals){
             minimum=new Vector2d(min(minimum.x, animal.getPosition().x), min(minimum.y, animal.getPosition().y));
+        }
+        for (Grass grass: pole){
+            minimum=new Vector2d(min(minimum.x, grass.getPosition().x), min(minimum.y, grass.getPosition().y));
+        }
+        if (animals.size()==0 & pole.size()==0){
+            return new Vector2d(0,0);
         }
         return minimum;
     }
     private Vector2d maximize(){
-        Vector2d maksimum=max_position;
+        Vector2d maksimum=new Vector2d(Integer.MIN_VALUE, Integer.MIN_VALUE);
         for (Animal animal: animals){
             maksimum=new Vector2d(max(maksimum.x,animal.getPosition().x), max(maksimum.y,animal.getPosition().y));
+        }
+        for (Grass grass: pole){
+            maksimum=new Vector2d(max(maksimum.x,grass.getPosition().x), max(maksimum.y,grass.getPosition().y));
+        }
+        if (animals.size()==0 & pole.size()==0){
+            return new Vector2d(0,0);
         }
         return maksimum;
     }

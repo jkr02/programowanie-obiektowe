@@ -13,11 +13,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/GrassField.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/GrassField.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/SimulationEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/SimulationEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/GrassField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/GrassFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/GrassFieldTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,7 @@
       <recent name="agh.ics.oop" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GrassFieldTest">
+  <component name="RunManager" selected="Gradle.Tests in 'agh.ics.oop'">
     <configuration name="GrassFieldTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -156,7 +155,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SimulationEngineTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'agh.ics.oop'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -169,7 +168,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.SimulationEngineTest&quot;" />
+            <option value="&quot;agh.ics.oop.*&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -203,19 +202,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.Tests in 'agh.ics.oop'" />
       <item itemvalue="Gradle.GrassFieldTest" />
       <item itemvalue="Gradle.GrassFieldTest.objectAt" />
       <item itemvalue="Gradle.GrassFieldTest.placeGrass" />
       <item itemvalue="Gradle.Vector2dTest" />
-      <item itemvalue="Gradle.SimulationEngineTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'agh.ics.oop'" />
         <item itemvalue="Gradle.GrassFieldTest" />
         <item itemvalue="Gradle.GrassFieldTest.placeGrass" />
         <item itemvalue="Gradle.GrassFieldTest.objectAt" />
         <item itemvalue="Gradle.Vector2dTest" />
-        <item itemvalue="Gradle.SimulationEngineTest" />
       </list>
     </recent_temporary>
   </component>
