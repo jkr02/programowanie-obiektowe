@@ -68,20 +68,11 @@ public class GrassField extends AbstarctWorldMap{
             elements.remove(animal.getPosition());
             grass_count-=1;
             elements.put(animal.getPosition(), animal);
-            animals.add(animal);
             animal.addObserver(this);
             placeGrass();
             return true;
         }
         return false;
-    }
-
-    @Override
-    public Object objectAt(Vector2d position) {
-        if (super.objectAt(position)!=null){
-            return super.objectAt(position);
-        }
-        return null;
     }
     private Vector2d minimize(){
         Vector2d minimum=new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);

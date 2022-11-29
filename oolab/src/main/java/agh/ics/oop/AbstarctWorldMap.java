@@ -1,12 +1,11 @@
 package agh.ics.oop;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 abstract class AbstarctWorldMap implements IWorldMap, IPositionChangeObserver{
     protected Map<Vector2d, IMapElement> elements=new HashMap<>();
-    protected ArrayList<Animal> animals=new ArrayList<>();
+
     protected Vector2d min_position;
     protected Vector2d max_position;
     protected Vector2d right_corner;
@@ -16,9 +15,7 @@ abstract class AbstarctWorldMap implements IWorldMap, IPositionChangeObserver{
         elements.remove(oldPosition);
         elements.put(newPosition, animal);
     }
-    public ArrayList<Animal> getAnimals(){
-        return new ArrayList<Animal>(animals);
-    }
+
     @Override
     public boolean canMoveTo(Vector2d position) {
         return position.follows(left_corner) && position.precedes(right_corner) && !isOccupied(position);
@@ -27,7 +24,6 @@ abstract class AbstarctWorldMap implements IWorldMap, IPositionChangeObserver{
     public boolean place(Animal animal) {
         if (canMoveTo(animal.getPosition()) && !isOccupied(animal.getPosition())){
             elements.put(animal.getPosition(), animal);
-            animals.add(animal);
             animal.addObserver(this);
             return true;
         }

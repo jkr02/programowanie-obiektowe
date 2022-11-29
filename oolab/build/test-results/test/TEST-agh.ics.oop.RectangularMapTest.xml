@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="agh.ics.oop.RectangularMapTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-11-22T18:07:28" hostname="DESKTOP-G37MSAM" time="0.061">
+<testsuite name="agh.ics.oop.RectangularMapTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-11-29T17:35:56" hostname="DESKTOP-G37MSAM" time="0.045">
   <properties/>
-  <testcase name="get_min_position()" classname="agh.ics.oop.RectangularMapTest" time="0.011"/>
-  <testcase name="canMoveTo()" classname="agh.ics.oop.RectangularMapTest" time="0.009"/>
-  <testcase name="isOccupied()" classname="agh.ics.oop.RectangularMapTest" time="0.008"/>
-  <testcase name="objectAt()" classname="agh.ics.oop.RectangularMapTest" time="0.01"/>
-  <testcase name="place()" classname="agh.ics.oop.RectangularMapTest" time="0.004"/>
+  <testcase name="get_min_position()" classname="agh.ics.oop.RectangularMapTest" time="0.008"/>
+  <testcase name="canMoveTo()" classname="agh.ics.oop.RectangularMapTest" time="0.005"/>
+  <testcase name="isOccupied()" classname="agh.ics.oop.RectangularMapTest" time="0.007"/>
+  <testcase name="objectAt()" classname="agh.ics.oop.RectangularMapTest" time="0.005"/>
+  <testcase name="place()" classname="agh.ics.oop.RectangularMapTest" time="0.003"/>
   <testcase name="get_max_position()" classname="agh.ics.oop.RectangularMapTest" time="0.004"/>
   <system-out><![CDATA[ y\x  0 1 2 3 4
   5: -----------

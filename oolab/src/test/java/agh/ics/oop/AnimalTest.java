@@ -2,6 +2,8 @@ package agh.ics.oop;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AnimalTest {
@@ -46,5 +48,54 @@ class AnimalTest {
             chewie.move(MoveDirection.FORWARD);
         }
         assertEquals("S", chewie.toString()); // czy nie wychodzi za mape na polodnie
+    }
+
+    @Test
+    void addObserver(){
+        GrassField mapa = new GrassField(10);
+        Animal zwierz = new Animal(mapa, new Vector2d(2,3));
+        zwierz.addObserver(mapa);
+        ArrayList<IPositionChangeObserver> tablica = new ArrayList<IPositionChangeObserver>();
+        tablica.add((IPositionChangeObserver) mapa);
+        assertEquals(zwierz.observers, tablica);
+        IPositionChangeObserver mapa2 = new RectangularMap(5,5);
+        tablica.add(mapa2);
+        assertNotEquals(zwierz.observers, tablica);
+        zwierz.addObserver(mapa2);
+        assertEquals(zwierz.observers, tablica);
+    }
+
+    @Test
+    void removeObserver(){
+        GrassField mapa = new GrassField(10);
+        Animal zwierz = new Animal(mapa, new Vector2d(2,3));
+        zwierz.addObserver(mapa);
+        ArrayList<IPositionChangeObserver> tablica = new ArrayList<IPositionChangeObserver>();
+        IPositionChangeObserver mapa2 = new RectangularMap(5,5);
+        tablica.add(mapa);
+        zwierz.addObserver(mapa2);
+        tablica.add(mapa2);
+        assertEquals(zwierz.observers, tablica);
+        zwierz.removeObserver(mapa2);
+        assertNotEquals(zwierz.observers, tablica);
+        zwierz.removeObserver(mapa);
+        assertNotEquals(zwierz.observers, tablica);
+    }
+    @Test
+    void positionChanged(){
+        RectangularMap mapa = new RectangularMap(8,9);
+        Animal zwierz = new Animal(mapa, new Vector2d(2,3));
+        mapa.place(zwierz);
+        ArrayList<IPositionChangeObserver> tablica = new ArrayList<IPositionChangeObserver>();
+        RectangularMap mapa2 = new RectangularMap(5,5);
+        tablica.add(mapa);
+        mapa2.place(zwierz);
+        tablica.add(mapa2);
+        assertEquals(zwierz.observers, tablica);
+        assertTrue(mapa.isOccupied(new Vector2d(2,3)));
+        assertTrue(mapa2.isOccupied(new Vector2d(2,3)));
+        zwierz.positionChanged(zwierz.getPosition(), new Vector2d(3,3));
+        assertTrue(mapa.isOccupied(new Vector2d(3,3)));
+        assertTrue(mapa2.isOccupied(new Vector2d(3,3)));
     }
 }
