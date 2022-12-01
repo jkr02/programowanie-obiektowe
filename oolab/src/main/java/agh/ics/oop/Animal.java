@@ -3,7 +3,7 @@ package agh.ics.oop;
 import java.util.ArrayList;
 
 public class Animal extends AbstractWorldElement{
-    private Vector2d start_position;
+
     private IWorldMap map=new RectangularMap(4,4);
     private MapDirection direction=MapDirection.NORTH;
     protected final ArrayList<IPositionChangeObserver> observers=new ArrayList<>();
@@ -14,15 +14,10 @@ public class Animal extends AbstractWorldElement{
     public Animal(IWorldMap map){
         this.position=new Vector2d(2,2);
         this.map=map;
-        this.start_position=new Vector2d(2,2);
     }
     public Animal(IWorldMap map, Vector2d initialPosition){
         this.map=map;
         this.position=initialPosition;
-        this.start_position=initialPosition;
-    }
-    public Vector2d get_start_position(){
-        return this.start_position;
     }
     @Override
     public String toString() {
