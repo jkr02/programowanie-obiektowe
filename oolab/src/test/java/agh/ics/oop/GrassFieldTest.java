@@ -2,8 +2,7 @@ package agh.ics.oop;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class GrassFieldTest {
     String[] arr = {"f", "l", "r","f","f","r","r","f","l","f","f","f","f","f","f","f","f","f","f","f"}; //argumenty dobrane tak, aby doszlo do zderzenia lub unikniecia kolizji
@@ -23,5 +22,11 @@ class GrassFieldTest {
         assertTrue(mapa.objectAt(new Vector2d(6,3)) instanceof Animal);
         assertTrue(mapa.objectAt(new Vector2d(2,10)) instanceof Animal);
         assertFalse(mapa.objectAt(new Vector2d(0,10)) instanceof Animal);
+    }
+
+    @Test
+    void place(){
+        assertTrue(mapa.place(new Animal(mapa, new Vector2d(3,3))));
+        assertFalse(mapa.place(new Animal(mapa, new Vector2d(3,3))));
     }
 }

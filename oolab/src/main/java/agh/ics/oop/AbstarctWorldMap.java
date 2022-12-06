@@ -5,15 +5,19 @@ import java.util.Map;
 
 abstract class AbstarctWorldMap implements IWorldMap, IPositionChangeObserver{
     protected Map<Vector2d, IMapElement> elements=new HashMap<>();
-
     protected Vector2d min_position;
     protected Vector2d max_position;
     protected Vector2d right_corner;
     protected Vector2d left_corner;
+    public MapBoundary mapBoundary;
     public void positionChanged(Vector2d oldPosition, Vector2d newPosition){
         Animal animal=(Animal) objectAt(oldPosition);
         elements.remove(oldPosition);
         elements.put(newPosition, animal);
+        mapBoundary.positionChanged(oldPosition, newPosition);
+    }
+    public Map<Vector2d, IMapElement> getElements(){
+        return new HashMap<>(elements);
     }
 
     @Override
@@ -24,6 +28,7 @@ abstract class AbstarctWorldMap implements IWorldMap, IPositionChangeObserver{
     public boolean place(Animal animal) {
         if (canMoveTo(animal.getPosition()) && !isOccupied(animal.getPosition())){
             elements.put(animal.getPosition(), animal);
+            mapBoundary.addElement(animal.getPosition());
             animal.addObserver(this);
             return true;
         }
@@ -49,4 +54,8 @@ abstract class AbstarctWorldMap implements IWorldMap, IPositionChangeObserver{
     public Vector2d get_max_position(){
         return max_position;
     }
+//    @Override
+//    public void setAppObserver(IPositionChangeObserver appObserver) {
+//        this.appObserver = appObserver;
+//    }
 }

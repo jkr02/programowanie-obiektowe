@@ -1,7 +1,8 @@
 package agh.ics.oop;
 
 
-import javax.swing.*;
+import agh.ics.oop.gui.App;
+import javafx.application.Application;
 
 public class World {
     public static void main(String[] args){
@@ -31,21 +32,11 @@ public class World {
 //            System.out.println(Grogu);
 //        }
 //        System.out.println(Grogu);
-
-        MoveDirection[] directions = new OptionsParser().parse(args);
-        IWorldMap map = new GrassField(10);
-        Vector2d[] positions = { new Vector2d(2,2), new Vector2d(3,4) };
-
-        JFrame frame = new JFrame();
-        frame.setSize(800, 800);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JTextArea pole = new JTextArea(map.toString());
-        frame.add(pole);
-        frame.setVisible(true);
-
-
-        IEngine engine = new SimulationEngine(directions, map, positions, pole);
-        engine.run();
+        try {
+            Application.launch(App.class, args);
+        }catch (IllegalArgumentException ex){
+            System.out.println(ex);
+        }
         System.out.println("stop");
     }
     static int emp(String[] arg){

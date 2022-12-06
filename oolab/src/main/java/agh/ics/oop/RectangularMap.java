@@ -1,6 +1,6 @@
 package agh.ics.oop;
 
-class RectangularMap extends AbstarctWorldMap{
+public class RectangularMap extends AbstarctWorldMap{
     public RectangularMap(int width, int height) {
         this.min_position = new Vector2d(0, 0);
         this.max_position = new Vector2d(width, height);

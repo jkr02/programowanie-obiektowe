@@ -49,4 +49,5 @@ public interface IWorldMap {
     Vector2d get_max_position();
 
     Vector2d get_min_position();
+  //  public void setAppObserver(IPositionChangeObserver appObserver);
 }

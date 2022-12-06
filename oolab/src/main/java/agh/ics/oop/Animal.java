@@ -28,6 +28,7 @@ public class Animal extends AbstractWorldElement{
     }
 
     void move(MoveDirection direction){
+        Vector2d pos = this.position;
         if (direction.equals(MoveDirection.LEFT)){
             this.direction=this.direction.previous();
         }
@@ -37,17 +38,16 @@ public class Animal extends AbstractWorldElement{
         if (direction.equals(MoveDirection.FORWARD)){
             Vector2d tmp = this.position.add(this.direction.toUnitVector());
             if (map.canMoveTo(tmp)){
-                positionChanged(position, tmp);
                 this.position=tmp;
             }
         }
         if (direction.equals(MoveDirection.BACKWARD)) {
             Vector2d tmp = this.position.subtract(this.direction.toUnitVector());
             if (map.canMoveTo(tmp)){
-                positionChanged(position, tmp);
                 this.position=tmp;
             }
         }
+        positionChanged(pos, position);
     }
     public void addObserver(IPositionChangeObserver observer){
         observers.add(observer);
